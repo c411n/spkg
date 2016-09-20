@@ -6,36 +6,36 @@
 /* First define this to be used on config struct */
 typedef enum
 {
-  SPKG_NONE,
-  SPKG_SHOW_HELP,
-  SPKG_CREATE_PKG,
-  SPKG_EXTRACT_PKG,
-  SPKG_INIT_DB,
-  SPKG_QUERY_DB,
-  SPKG_INSTALL_PKGS,
-  SPKG_REMOVE_PKGS,
-  SPKG_UPGRADE_PKGS
+	SPKG_NONE,
+	SPKG_HELP_COMMAND,
+	SPKG_CREATE_COMMAND,
+	SPKG_EXTRACT_COMMAND,
+	SPKG_INIT_COMMAND,
+	SPKG_QUERY_COMMAND,
+	SPKG_INSTALL_COMMAND,
+	SPKG_REMOVE_COMMAND,
+	SPKG_UPGRADE_COMMAND
 } spkg_command_t;
 
 /* Runtime configuration struct */
 typedef struct
 {
-  char* spkg_os_type;
-  char* spkg_system_arch;
-  long spkg_total_memory;
-  int spkg_cpu_count;
-  char* spkg_kernel_version;
-  spkg_list_t* spkg_handle_archs;
+	char* spkg_os_type;
+	char* spkg_system_arch;
+	long spkg_total_memory;
+	int spkg_cpu_count;
+	char* spkg_kernel_version;
+	spkg_list_t* spkg_handle_archs;
 
-  char* spkg_default_root;
-  spkg_command_t spkg_runtime_command;
-  spkg_bool_t spkg_check_run_deps;
-  spkg_bool_t spkg_check_run_conflicts;
-  spkg_bool_t spkg_check_run_suggests;
-  spkg_bool_t spkg_run_pkg_script;
-  spkg_bool_t spkg_run_force_flag;
-  spkg_bool_t spkg_run_verbose_mode;
-  spkg_bool_t spkg_run_silent_mode;
+	char* spkg_default_root;
+	spkg_command_t spkg_runtime_command;
+	spkg_bool_t spkg_check_run_deps;
+	spkg_bool_t spkg_check_run_conflicts;
+	spkg_bool_t spkg_check_run_suggests;
+	spkg_bool_t spkg_run_pkg_script;
+	spkg_bool_t spkg_run_force_flag;
+	spkg_bool_t spkg_run_verbose_mode;
+	spkg_bool_t spkg_run_silent_mode;
 } spkg_config_t;
 
 #define SPKG_SHORT_OPTIONS      "hc:x:IQ:i:r:u:"

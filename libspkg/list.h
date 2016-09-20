@@ -6,8 +6,8 @@
 
 typedef struct
 {
-  size_t size;
-  char** vector;
+	size_t size;
+	char** vector;
 } spkg_list_t;
 
 spkg_list_t* spkg_new_list(void);
